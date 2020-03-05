@@ -1,0 +1,13 @@
+<?php echo Form::open(['url' => 'post/store']); ?>
+
+<label>Title</label>
+<?php echo Form::text('title', ''); ?>
+
+<label>Body</label>
+<?php echo Form::textarea('body', ''); ?>
+
+
+<?php echo Form::submit('Save Post'); ?>
+
+
+<?php echo Form::close(); ?>

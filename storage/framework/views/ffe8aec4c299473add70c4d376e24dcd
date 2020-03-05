@@ -1,0 +1,19 @@
+<?php echo Form::open(['url' => 'auth/login', 'class' => 'form']); ?>
+
+
+<?php echo Form::email('email', '', ['class'=> 'form-control']); ?>
+
+
+<?php echo Form::password('password', ['class'=> 'form-control']); ?>
+
+
+<label>
+
+<input name="remember" type="checkbox">Remember me
+
+</label>
+
+<?php echo Form::submit('Login', ['class' => 'btn btn-primary']); ?>
+
+
+<?php echo Form::close(); ?>

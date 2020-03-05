@@ -1,0 +1,6 @@
+<?php $__env->startSection('content'); ?>
+    <h2>This is the post:</h2>
+    <h4><?php echo e($post->title); ?></h4>
+    <article><?php echo e($post->body); ?></article>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('blog.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,21 @@
+<!-- Uso de condicionales en Blade -->
+
+<?php $__env->startSection('content'); ?>
+<?php if(count($posts) > 0 ): ?>
+    <h2>Listado de posts:</h2>
+    <ul>
+        <?php foreach($posts as $post): ?>
+            <li>
+                <a href="<?php echo e(url('post', ['id' => $post->id])); ?>"><?php echo e($post->title); ?></a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php else: ?>
+    <h3>No hay posts</h3>
+<?php endif; ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('footer'); ?>
+<p>This is the footer</p>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('blog.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
